@@ -3,88 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+<script>
+let currentSlide = 0;
+const showSlide = (index)=>{
+    const slides = document.querySelectorAll(".image")
+    if (index >= slides.length) {
+        currentSlide = 0  
+    }else if (index < 0) {
+        currentSlide = slides.length-1 
+    }else{
+        currentSlide = index
+    }
+
+    slides.forEach((slide, i)=> {
+        slide.style.display = i === currentSlide ? "block": "none"
+    })
+}
+
+const changeSlide = (direction)=>{
+    showSlide(currentSlide + direction)
+}
+
+window.onload =()=>{
+    showSlide(currentSlide)
+}
+
+
+
+</script>
 <body>
-    <div class="navbar">
+    <div class="navbar bg-gradiant">
         <h1>LearnCode</h1>
         <ul class="navlinks">
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">contact</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">contact</a></li>
+            <li id="login"><a href="/login.html">Login</a></li>
+            <li><a href="/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a></li>
+            <li id="avatar">
+                <!-- <a   href="/">
+                    R
+            </a> -->
+        </li>
         </ul>
         <p class="menu" id="menu">
             <span>
-
                 <i class="fa-solid fa-bars"></i>
             </span>
         </p>
     </div>
-    <div class="hero">
-        <div class="images">
-            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=100%" alt="">
-            <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=100%" alt="">
-            <img src="https://images.pexels.com/photos/1181449/pexels-photo-1181449.jpeg?auto=compress&cs=tinysrgb&w=100%" alt="">
+    <section class="hero">
+        <div class="hero_container">
+            <div class="image hero_box_1">
+                <div class="hero_content">
+                    <div class="content">
+                        <h3 >Smart Watch</h3>
+                        <h1 class="hero_heading">Waterproof Watch</h1>
+                    </div>
+                </div>
+                <div class="hero_img">
+                    <img src="/images/heroImages/watch_1.png" alt="">
+                </div>
+            </div>
+            <div class="image hero_box_1">
+                <div class="hero_content">
+                    <div class="content">
+                        <h3 >Wireless device</h3>
+                        <h1 class="hero_heading">Wireless Headphone</h1>
+                    </div>
+                </div>
+                <div class="hero_img_2">
+                    <img src="/images/heroImages/hero_headphone_1.png" alt="">
+                </div>
+            </div>
+            <div class="image hero_box_3">
+                <div class="hero_content">
+                    <div class="content">
+                        <h3 >Verse Earphones</h3>
+                        <h1 class="hero_heading">Softness Music</h1>
+                    </div>
+                </div>
+                <div class="hero_img_3">
+                    <img src="/images/heroImages/hero_headphone_2.png" alt="">
+                </div>
+            </div>
         </div>
-        <div class="hero_btns">
-            <span class="arrow_btn left_btn">
+            <button class="prev arrow_btn left_btn" onclick="changeSlide(-1)">
                 <i class="fa-solid fa-arrow-left"></i>
-             </span>
-            <span class="arrow_btn right_btn">
+             </button>
+            <button class="next arrow_btn right_btn" onclick="changeSlide(1)">
                 <i class="fa-solid fa-arrow-right"></i>
-            </span>
-        </div>
+            </button>
+    
+    </section>
 
-    </div>
+    <section class="conatiner">
+        <div class="category_container">
+            <h1 class="heading">Popular Category</h1>
+            <div class="category" id="categoryContainer">
+                <div class="category_box" id="category_box">
+                     <div class="category_img">
+                    <img src="https://spacingtech.com/html/electon/electon/img/cat/home-1-cate1.jpg" alt="">
+                    </div>
+                <h2>Smartphone</h2>
+                </div>
 
-    <div class="card_conatiner">
-        <div class="cards">
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                </div>
-                <div class="card_content">
-                    <a href="/" class="card_title">This is verstile product to use for the children</a>
-                    <h1 class="card_price">$49</h1>
-                    <button>Add To Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                </div>
-                <div class="card_content">
-                    <a href="/" class="card_title">This is verstile product to use for the children</a>
-                    <h1 class="card_price">$49</h1>
-                    <button>Add To Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                </div>
-                <div class="card_content">
-                    <a href="/" class="card_title">This is verstile product to use for the children</a>
-                    <h1 class="card_price">$49</h1>
-                    <button>Add To Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                </div>
-                <div class="card_content">
-                    <a href="/" class="card_title">This is verstile product to use for the children</a>
-                    <h1 class="card_price">$49</h1>
-                    <button>Add To Cart</button>
-                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="/script.js"></script>
+    <section class="conatiner">
+        <div class=" ">
+            <h1 class="heading">Best Sellers</h1>
+            <div class="cards" id="bestSellers">
+                <div class="card" id="bestSellers_card">
+                    <div class="card_img">
+                        <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    </div>
+                    <div class="card_content">
+                        <a href="/" class="card_title">This is verstile product to use for the children</a>
+                        <p class="card_price">$49</p>
+                        <button class="btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                </div>
+                <div class="card_content">
+                    <a href="/" class="card_title">This is verstile product to use for the children</a>
+                    <h1 class="card_price">$49</h1>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                </div>
+                <div class="card_content">
+                    <a href="/" class="card_title">This is verstile product to use for the children</a>
+                    <h1 class="card_price">$49</h1>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conatiner">
+        <div class=" ">
+            <h1 class="heading">New Arrivals</h1>
+            <div class="cards" id="newArrivals">
+                <div class="card" id="newArrivals_card">
+                    <div class="card_img">
+                        <img src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    </div>
+                    <div class="card_content">
+                        <a href="/" class="card_title">This is verstile product to use for the children</a>
+                        <p class="card_price">$49</p>
+                        <button class="btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conatiner">
+        <div class="newsletter bg-gradiant">
+            <div class="left">
+                <h1>Subscribe</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vitae quam sapiente obcaecati. Architecto, aspernatur. Cupiditate alias maxime eligendi corporis optio explicabo sit hic rerum quae eius! Reprehenderit, dicta non.</p>
+            </div>
+            <div class="right">
+                <div class="inputDiv">
+                    <input type="text">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                     
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: abc@example.com</p>
+                    <p>Phone: +111 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnCode. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+    
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="category.js"></script>
+    <script src="getUserData.js"></script>
 </body>
 </html>

@@ -4,11 +4,10 @@ btn.addEventListener("click", () => {
   navlinks.classList.toggle("active");
 });
 
-// const images = document.querySelector(".hero .images img");
+const filterIcon = document.querySelector(".filterIcon");
+const filters = document.querySelector(".filters");
 
-// const allImage = [];
-// for (let i = 0; i < images.length; i++) {
-//   const element = images[i].src;
-//   allImage.push(element);
-// }
-// console.log("images :", allImage);
+filterIcon.addEventListener("click", () => {
+  filters.classList.toggle("active");
+  console.log("hello");
+});

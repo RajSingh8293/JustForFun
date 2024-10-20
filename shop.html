@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar">
+        <h1>LearnCode</h1>
+        <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">contact</a></li>
+            <li id="login"><a href="/login.html">Login</a></li>
+            <li><a href="/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a></li>
+            <li id="avatar">
+                <!-- <a   href="/">
+                    R
+            </a> -->
+        </li>
+        </ul>
+        <p class="menu" id="menu">
+            <span>
+
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </p>
+    </div>
+    <section class="conatiner" id="shop_header">
+        <div class="shop_heading">
+            <h1>#shop</h1>
+        </div>
+    </section>
+
+    <section class="conatiner">
+        <div class="productsCount">
+            <button class="btn filterIcon" id="filterIcon"><i class="fa-solid fa-filter"></i></button>
+            <h1 class="products">
+                Products 
+                <span 
+                class="totalProducts">
+            </span>
+            </h1>
+            <div class=" btns" id="sort">
+                <select name="" id="sorting">
+                    <option value="name-asc" class="sortBtn" >Name A-Z</option>
+                    <option value="name-desc" class="sortBtn" >Name Z-A</option>
+                    <option value="price-asc" class="sortBtn" >Price Low To High</option>
+                    <option value="price-desc" class="sortBtn" >Price High To Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="shop_conatiner">
+            <div class="filters">
+                <div class="btns showFilter" id="btns">
+                    <h1 class="filter_heading">Filters</h1>
+                    <button category="all" class="filter_btn" >All</button>
+                    <button category="Headphones" class="filter_btn" >Headphones</button>
+                    <button category="Smartphone" class="filter_btn" >Smartphone</button>
+                    <button category="Speaker" class="filter_btn" >Speaker</button>
+                    <button category="Accessories" class="filter_btn" >Accessories</button>
+                </div>
+    
+                <!-- <div class=" btns" id="sort">
+                    <button sortData="name-asc" class="sortBtn" >Name A-Z</button>
+                    <button sortData="name-desc" class="sortBtn" >Name Z-A</button>
+                    <button sortData="price-asc" class="sortBtn" >Price Low To High</button>
+                    <button sortData="price-desc" class="sortBtn" >Price High To Low</button>
+                </div> -->
+            </div>
+            <div class="cards"id="shopProductContainer">
+                <div class="card">
+                    <div class="card_img">
+                        <img src="https://m.media-amazon.com/images/I/612+65xHWJL._AC_UY218_.jpg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <a href="/" class="card_title">This is verstile product to use for the children</a>
+                        <h1 class="card_price">$49</h1>
+                        <button class="btn">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src="https://m.media-amazon.com/images/I/612+65xHWJL._AC_UY218_.jpg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <a href="/" class="card_title">This is verstile product to use for the children</a>
+                        <h1 class="card_price">$49</h1>
+                        <button class="btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnCode. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+    
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+    <script src="/getUserData.js"></script>
+</body>
+</html>

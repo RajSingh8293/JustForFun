@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="navbar">
+        <h1>LearnCode</h1>
+        <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">contact</a></li>
+            <li id="login"><a href="/login.html">Login</a></li>
+            <li><a href="/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a></li>
+            <li id="avatar">
+                <!-- <a   href="/">
+                    R
+            </a> -->
+        </li>
+        </ul>
+        <p class="menu" id="menu">
+            <span>
+
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </p>
+    </div>
+    <section class="conatiner" id="productDetailsContainer">
+        <!-- <div class="productDetails">
+            <div class="left">
+                <img id="image" src="https://m.media-amazon.com/images/I/71tGtBuo0yL._AC_UY218_.jpg" alt="">
+
+            </div>
+            <div class="right">
+                <h2 id="name">Product details</h2>
+                <h2 id="price">99</h2>
+                <p id="ratings"><span class="rat">Ratings</span>4.5</p>
+                <p id="description">Welcome to Your Store, your number one source for all thing</p>
+                <button class="btn">Add To Cart</button>
+            </div>
+        </div> -->
+    </section>
+
+    <section class="conatiner">
+        <h1 class="heading">Related Products</h1>
+        <div class="cards relatedProducts"  id="relatedProducts">
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://m.media-amazon.com/images/I/612+65xHWJL._AC_UY218_.jpg" alt="">
+                </div>
+                <div class="card_content">
+                    <a href="/" class="card_title">This is verstile product to use for the children</a>
+                    <h1 class="card_price">$49</h1>
+                    <button class="btn">Add To Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LearnCode. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="/script.js"></script>
+    <script src="productdetails.js"></script>
+    <script src="relatedProducts.js"></script>
+    <script src="/getUserData.js"></script>
+</body>
+</html>
